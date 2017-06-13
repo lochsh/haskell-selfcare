@@ -17,4 +17,4 @@ main = do
     noun <- randomPick nouns
     adj <- randomPick adjs
 
-    putStr $ "You are a" ++ adj ++ " " ++ noun
+    putStrLn $ "You are a" ++ adj ++ " " ++ noun
