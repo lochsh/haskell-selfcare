@@ -8,7 +8,7 @@ getLines path = do contents <- readFile path
 
 -- Select random element from list
 randomPick :: [a] -> IO a
-randomPick xs = fmap (xs !!) $ randomRIO (0, length xs - 1)
+randomPick xs = (xs !!) <$> randomRIO (0, length xs - 1)
 
 main = do
     nouns <- getLines "nouns.txt"
